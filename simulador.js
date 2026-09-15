@@ -10,4 +10,12 @@ function calcular(){
     //Calculo de capacidad de pago
     let capacidadDePago = calcularCapacidadPago(saldo);
     mostarEnSpan("spnCapacidadPago",capacidadDePago);
+
+    //Calculo de interés simple
+    let monto = recuperarInt("txtMonto");
+    let plazo = recuperarInt("txtPlazo");
+    let tasa = recuperarInt("txtTasaInteres");
+    let interes = calcularInteresSimple(monto,tasa,plazo);
+    mostarEnSpan("spnInteresPagar",interes);
+
 }
