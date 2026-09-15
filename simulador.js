@@ -18,4 +18,7 @@ function calcular(){
     let interes = calcularInteresSimple(monto,tasa,plazo);
     mostarEnSpan("spnInteresPagar",interes);
 
+    //Calculo de total a pagar
+    let total = calularTotalPagar(monto,interes);
+    mostarEnSpan("spnTotalPrestamo",total);
 }
