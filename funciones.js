@@ -20,3 +20,7 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
 function calularTotalPagar(monto,interes){
     return monto + interes + APORTE_SOLCA;
 }
+
+function calcularCuotaMensual(total,plazoAnios){
+    return total/(plazoAnios*12);
+}

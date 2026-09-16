@@ -21,4 +21,8 @@ function calcular(){
     //Calculo de total a pagar
     let total = calularTotalPagar(monto,interes);
     mostarEnSpan("spnTotalPrestamo",total);
+
+    //Calculo de cuota mensual
+    let cuota = calcularCuotaMensual(total,plazo);
+    mostarEnSpan("spnCuotaMensual",cuota);
 }
