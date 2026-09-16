@@ -20,3 +20,8 @@ function mostarEnSpan(idComponente, valor) {
     let cmp = document.getElementById(idComponente);
     cmp.textContent = valor.toFixed(2);
 }
+
+function mostarEnSpanTxt(idComponente, valor) {
+    let cmp = document.getElementById(idComponente);
+    cmp.textContent = valor;
+}
