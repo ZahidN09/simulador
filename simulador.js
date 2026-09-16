@@ -1,6 +1,11 @@
 //AQUI EL JAVASCRIPT PARA MANIPULAR EL HTML
 
 function calcular() {
+    // 1. Ejecutar validaciones
+    if (!validarFormulario()) {
+        return; // Si hay errores, detener la ejecución
+    }
+    
     //Calculo de valor disponible
     let ingresos = recuperarFloat("txtIngresos");
     let egresos = recuperarFloat("txtEgresos");

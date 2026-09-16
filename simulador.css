@@ -282,3 +282,16 @@ button:active {
         padding: 10px 15px;
     }
 }
+.error-message {
+    color: #B31B22;
+    font-style: italic;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.input-error {
+    border-color: #B31B22 !important;
+    box-shadow: 0 0 0 3px rgba(179, 27, 34, 0.15) !important;
+}

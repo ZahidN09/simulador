@@ -1,0 +1,20 @@
+Quiero validar inputs en JavaScript.
+Reglas:
+-Mostar mensaje debajo de casa input sin usar alert().
+-El mensaje debe ser en color rojo y en cursiva.
+-Validaciones:
+	-Solo números
+	-No puede estar vacío, todos los campos son obligatorios de llenar.
+	-Para cada input se debe validar el tipo de dato y si está dentro del rango de valores permitido:
+		txtIngresos: Float (0.00 - 1,000,000.00)
+		txtEgresos: Float (0.00 - 1,000,000.00)
+		txtMonto: Float (100.00 - 500,000.00)
+		txtPlazo: INT (1 - 30)
+		txtTasaInteres: Float (0.10 - 100.00)
+Condiciones técnicas:
+-Usar los mismo ID's existentes.
+-No modificar ID's existentes.
+-Mostrar errores en un elemento debajo del Input correspondiente.
+- Las validaciones y mensajes solo se deben realizar una vez se apriete el botón CALCULAR CRÉDITO.
+- Se debe mantener la estética , diseño y características responsive de la página.
+Devuélveme solo las partes que debe agregar o modificar (HTML,CSS y JS), no todo el código.
