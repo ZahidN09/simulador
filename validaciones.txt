@@ -18,3 +18,8 @@ Condiciones técnicas:
 - Las validaciones y mensajes solo se deben realizar una vez se apriete el botón CALCULAR CRÉDITO.
 - Se debe mantener la estética , diseño y características responsive de la página.
 Devuélveme solo las partes que debe agregar o modificar (HTML,CSS y JS), no todo el código.
+
+
+
+
+Aumenta en la validación que los ingresos y egresos no pueden tener más de dos dígitos decimales. Dame las secciones de código que debo reemplazar.
