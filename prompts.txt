@@ -1,0 +1,5 @@
+Eres un experto diseñador gráfico y programador Web. Necesito estrictamente que hagas mi página responsive para PC, móvil y tablets. Solo puedes usar HTML y CSS, ninguna otra librería. No toques ni modifiques lo Ids, componentes, links o archivos referenciados. Genera el código HTML y el código en CSS en una sola respuesta pero por separado. Usa tu conocimiento como diseñador para darle un aspecto ejecutivo y de finanzas profesional en base la los colores y marca del bancoLogo.png, así que haz primero un análisis del logo para después en base al mismo pasar al diseño.
+
+El diseño es demasiado simple, no hagas mucho uso del color blanco. Además es estricto que el logo del banco esté en la página, entonces incorpóralo de manera que se integre de manera natural y elegante en la página.
+
+

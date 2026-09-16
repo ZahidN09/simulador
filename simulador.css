@@ -1,70 +1,284 @@
+/* =========================================
+   VARIABLES DE MARCA Y TEMA OSCURO EJECUTIVO
+   ========================================= */
+:root {
+    /* Colores extraídos del Logo de Banco ProCredit */
+    --brand-red: #B31B22;
+    --brand-blue: #1C75BC;
+    --brand-green: #009A44;
+    --brand-orange: #F58220;
+    --brand-yellow: #FFC20E;
+    
+    /* Paleta Oscura Financiera */
+    --bg-body: #0A0E17;       /* Azul profundo casi negro */
+    --bg-card: #131B2F;       /* Azul pizarra oscuro para la tarjeta */
+    --bg-input: #1C253C;      /* Fondo de los inputs */
+    --border-color: #2A3A5A;  /* Bordes sutiles */
+    --text-main: #E2E8F0;     /* Texto principal claro */
+    --text-muted: #8A9BB5;    /* Texto secundario atenuado */
+    --text-highlight: #FFFFFF;/* Blanco puro para valores */
+    
+    --radius-card: 16px;
+    --radius-input: 8px;
+    --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================================
+   RESETEO Y ESTILOS BASE
+   ========================================= */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-body);
+    /* Degradado radial sutil para dar profundidad */
+    background-image: radial-gradient(circle at 50% 0%, #1a2440 0%, var(--bg-body) 70%);
     margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 400px;
-    margin: 40px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* =========================================
+   CONTENEDOR PRINCIPAL (Responsive)
+   ========================================= */
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 35px 30px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Línea decorativa superior con los 5 colores del logo */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, 
+        var(--brand-red) 0%, 
+        var(--brand-blue) 25%, 
+        var(--brand-green) 50%, 
+        var(--brand-orange) 75%, 
+        var(--brand-yellow) 100%
+    );
+}
+
+/* =========================================
+   INTEGRACIÓN DEL LOGO
+   ========================================= */
+.logo-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.bank-logo {
+    max-width: 220px;
+    height: auto;
+    /* Contenedor tipo insignia para integrar el logo elegantemente */
+    background-color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.bank-logo:hover {
+    transform: scale(1.02);
+}
+
+/* =========================================
+   TIPOGRAFÍA
+   ========================================= */
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0 0 30px 0;
+    color: var(--text-highlight);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 h2 {
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--brand-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
 }
 
 label {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    margin-top: 15px;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
+/* =========================================
+   INPUTS (Campos de texto)
+   ========================================= */
 input {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    margin-top: 6px;
+    border-radius: var(--radius-input);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-input);
+    font-size: 15px;
+    color: var(--text-highlight);
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
+input:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 4px rgba(28, 117, 188, 0.2);
+    background-color: #212D4A;
+}
+
+/* =========================================
+   RESULTADOS (Párrafos y Spans)
+   ========================================= */
 p {
-    margin-top: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 span {
-    font-weight: bold;
-    color: #2c3e50;
+    font-weight: 600;
+    color: var(--text-highlight);
+    font-size: 15px;
 }
 
+/* Estilo específico para el estado del crédito (Dashboard) */
+#spnEstadoCredito {
+    color: var(--brand-yellow);
+    padding: 4px 10px;
+    background-color: rgba(255, 194, 14, 0.1);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 194, 14, 0.2);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
 .buttons {
-    margin-top: 20px;
+    margin-top: 35px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 12px;
 }
 
 button {
-    width: 48%;
-    padding: 10px;
+    width: 100%;
+    padding: 16px;
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    border-radius: var(--radius-input);
+    font-size: 15px;
+    font-weight: 700;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-button:hover {
-    background-color: #2980b9;
+button:active {
+    transform: translateY(2px);
+}
+
+/* Botón Calcular (Acción Principal - Rojo ProCredit) */
+#btnCalcularCredito {
+    background: linear-gradient(135deg, var(--brand-red), #8a1116);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(179, 27, 34, 0.3);
+}
+
+#btnCalcularCredito:hover {
+    background: linear-gradient(135deg, #d11e26, var(--brand-red));
+    box-shadow: 0 10px 25px rgba(179, 27, 34, 0.4);
+}
+
+/* Botón Reiniciar (Acción Secundaria - Estilo Fantasma) */
+#btnReiniciar {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+}
+
+#btnReiniciar:hover {
+    background-color: var(--bg-input);
+    color: var(--text-highlight);
+    border-color: var(--text-muted);
+}
+
+/* =========================================
+   MEDIA QUERIES (Responsive para PC y Tablets)
+   ========================================= */
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 600px) {
+    .container {
+        padding: 50px 40px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+
+    /* En pantallas grandes, los botones se alinean horizontalmente */
+    .buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    button {
+        width: 48%;
+    }
+}
+
+/* Móviles muy pequeños (ajuste fino) */
+@media (max-width: 360px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    .bank-logo {
+        max-width: 180px;
+        padding: 10px 15px;
+    }
 }
